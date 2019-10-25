@@ -33,3 +33,4 @@ out/
 
 \.attach_*
 tmp/
+bin/
