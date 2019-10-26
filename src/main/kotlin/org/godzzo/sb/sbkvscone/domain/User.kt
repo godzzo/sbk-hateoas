@@ -19,6 +19,6 @@ data class User(
 		mappedBy - memeber field of the Many side entity
 		https://stackoverflow.com/questions/45642181/kotlin-jpa-encapsulate-onetomany
 	 */
-	@OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])
+	@OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
 	val history: List<UserHistory>
 )
