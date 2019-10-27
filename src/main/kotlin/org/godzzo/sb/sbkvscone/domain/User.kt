@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 data class User(
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Long,
+	val id: Long = 0,
 
 	@NotNull
 	@Size(min = 1, max = 50)
@@ -20,5 +20,5 @@ data class User(
 		https://stackoverflow.com/questions/45642181/kotlin-jpa-encapsulate-onetomany
 	 */
 	@OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
-	val history: List<UserHistory>
+	val history: List<UserHistory> = mutableListOf()
 )
