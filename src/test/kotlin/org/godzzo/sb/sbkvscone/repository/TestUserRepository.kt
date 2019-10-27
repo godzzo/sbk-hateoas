@@ -43,4 +43,20 @@ class TestUserRepository(
 
         doCount()
     }
+
+    @Test
+    fun testFindAll() {
+        doCount()
+
+        val users = repository.findAll()
+
+        users.forEach{user ->
+            println("user: ${user.id}")
+
+            user.history.forEach{history ->
+                println("-- history: ${history.id}")
+            }
+        }
+    }
+
 }
