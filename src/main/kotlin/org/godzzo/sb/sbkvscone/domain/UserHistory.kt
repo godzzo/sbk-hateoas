@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 data class UserHistory(
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	val id: Long,
+	val id: Long = 0,
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")

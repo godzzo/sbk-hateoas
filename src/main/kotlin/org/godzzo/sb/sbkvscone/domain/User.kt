@@ -20,5 +20,5 @@ data class User(
 		https://stackoverflow.com/questions/45642181/kotlin-jpa-encapsulate-onetomany
 	 */
 	@OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
-	val history: List<UserHistory> = mutableListOf()
+	val history: MutableList<UserHistory> = mutableListOf()
 )
